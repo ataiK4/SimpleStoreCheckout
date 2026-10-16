@@ -3,7 +3,7 @@ public class dfhjs {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int total = 0, quantity = 0, discout = 0, finaltotal = 0, items = 0, change = 0, payment = 0, mouse = 0, keyboard = 0, headphones = 0, laptopstand = 0;
-        int mousetotal = 0, keyboardtotal = 0, headphonestotal = 0, laptopstandtotal = 0, bonusdiscount = 0;
+        int bonusdiscount = 0;
         int option = 0;
 
         while (option != 5) {
@@ -25,7 +25,6 @@ public class dfhjs {
                         quantity = scanner.nextInt();
                         if (quantity > 0) {
                             total = total + quantity * 20;
-                            mousetotal = mousetotal + quantity*20;
                             items += quantity;
                             mouse += quantity;
                             System.out.println("\nAdded to cart!");
@@ -42,7 +41,6 @@ public class dfhjs {
                         quantity = scanner.nextInt();
                         if (quantity > 0) {
                             total = total + quantity * 40;
-                            keyboardtotal = keyboardtotal + quantity*40;
                             items += quantity;
                             keyboard += quantity;
                             System.out.println("\nAdded to cart!");
@@ -59,7 +57,6 @@ public class dfhjs {
                         quantity = scanner.nextInt();
                         if (quantity > 0) {
                             total = total + quantity * 50;
-                            headphonestotal = headphonestotal + quantity*50;
                             items += quantity;
                             headphones += quantity;
                             System.out.println("\nAdded to cart!");
@@ -76,7 +73,6 @@ public class dfhjs {
                         quantity = scanner.nextInt();
                         if (quantity > 0) {
                             total = total + quantity * 30;
-                            laptopstandtotal = laptopstandtotal + quantity*30;
                             items += quantity;
                             laptopstand += quantity;
                             System.out.println("\nAdded to cart!");
@@ -100,19 +96,19 @@ public class dfhjs {
                         }
                         if (mouse >= 5) {
                             System.out.println("5% bonus discount for Mouse");
-                            bonusdiscount = (int) (bonusdiscount + mousetotal*0.05);
+                            bonusdiscount = (int) (bonusdiscount + mouse*0.05*20);
                         }
                         if (keyboard >= 5) {
                             System.out.println("5% bonus discount for Keyboard");
-                            bonusdiscount = (int) (bonusdiscount + keyboardtotal*0.05);
+                            bonusdiscount = (int) (bonusdiscount + keyboard*0.05*40);
                         }
                         if (headphones >= 5) {
                             System.out.println("5% bonus discount for Headphones");
-                            bonusdiscount = (int) (bonusdiscount + headphonestotal*0.05);
+                            bonusdiscount = (int) (bonusdiscount + headphones*0.05*50);
                         }
                         if (laptopstand >= 5) {
                             System.out.println("5% bonus discount for Laptop Stand");
-                            bonusdiscount = (int) (bonusdiscount + laptopstandtotal*0.05);
+                            bonusdiscount = (int) (bonusdiscount + laptopstand*0.05*30);
                         }
                         System.out.println("\nDiscount: " + discout + "$");
                         System.out.println("Bonus Discount: " + bonusdiscount + "$");
